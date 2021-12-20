@@ -1,4 +1,7 @@
+* {
+    font-family: "IBM Plex Mono", monospace;
 
+}
 body {
     background-color: lightblue;
     display:flex;
@@ -14,6 +17,9 @@ h1 {
     margin: 0 auto;
     width: min-content;
 
+}
+a {
+    margin: 0 auto;
 }
 .center {
     margin: 0 auto;
@@ -33,9 +39,38 @@ ul {
     text-align: left;
 
 }
+li {
+    margin: 2vh;
+}
 li a {
     color: royalblue;
-
-
 }
+
+#choice {
+    margin-top: 10vh;
+    width: auto;
+}
+input {
+    margin: 1vh;
+}
+#choice a {
+    margin: 1vh;
+    justify-content: space-evenly;
+}
+
+#submit {
+    margin: 1vh 0 0;
+    width: auto;
+    font-size: 1vw;
+}
+
+.results * {
+    margin: 2vh;
+}
+
+.results ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
 

@@ -1,3 +1,6 @@
+{%  load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<div class="center results" id="choice">
 <h1>{{ question.question_text }}</h1>
 
 <ul>
@@ -7,4 +10,5 @@
 </ul>
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+</div>
 <a href="{% url 'polls:index' %}"> Back Home </a>
