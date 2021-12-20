@@ -1,3 +1,9 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<a id="admin" href ="{%  url 'admin:index' %}">Admin</a>
+<div class="center">
+<h1> Current Polls </h1>
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -7,3 +13,4 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+</div>
