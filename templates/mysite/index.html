@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type="text/css">
+        body {
+            background-color: beige;
+            font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+    <body>
+    <div>
+        <h1> Welcome to Farid's Django Server. Here are the currently available apps: </h1>
+    </div>
+    <div class="container">
+        <div>
+            <a href="{% url "weather:index" %}"><h2> Weather App</h2></a>
+        </div>
+        <div>
+            <a href="{% url "polls:index"%}"><h2>Polls App</h2></a>
+        </div>
+    </div>
+</body>
+</html>
