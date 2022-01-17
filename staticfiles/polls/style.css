@@ -1,0 +1,76 @@
+* {
+    font-family: "IBM Plex Mono", monospace;
+
+}
+body {
+    background-color: lightblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10vh;
+    height: 100vh;
+}
+h1 {
+    margin: 0 0 1vh;
+}
+#admin {
+    margin: 0 auto;
+    width: min-content;
+
+}
+a {
+    margin: 0 auto;
+}
+.center {
+    margin: 0 auto;
+    border: black solid 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min-content;
+    background-color: ghostwhite;
+    padding: 5vh 5vh;
+    box-shadow: 0 0 5px black;
+}
+ul {
+    margin: 0;
+    width: max-content;
+    text-align: left;
+
+}
+li {
+    margin: 2vh;
+}
+li a {
+    color: royalblue;
+}
+
+#choice {
+    margin-top: 10vh;
+    width: auto;
+}
+input {
+    margin: 1vh;
+}
+#choice a {
+    margin: 1vh;
+    justify-content: space-evenly;
+}
+
+#submit {
+    margin: 1vh 0 0;
+    width: auto;
+    font-size: 1vw;
+}
+
+.results * {
+    margin: 2vh;
+}
+
+.results ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
