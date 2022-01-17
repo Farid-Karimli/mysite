@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ song_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-color: lightpink;
+            font-family: 'Roboto Slab', serif;
+
+        }
+        #wrapper {
+
+        }
+        #main {
+            margin: 10vh auto 0;
+            width: 50em;
+            text-align: center;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        ul {
+            width: 100%;
+        }
+        #right{
+            width: 100%;
+        }
+        .song {
+            display: flex;
+            flex-direction: row;
+        }
+        .song * {
+            margin-left: 1vw;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrapper">
+        <div id="main">
+            <div id="image">
+                <img src="{{ album.artwork }}" width="300px" height="300px">
+            </div>
+            <div id="right">
+                <h2>{{ album.album_name }}</h2>
+                <audio controls>
+                    <source src="{{ preview }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

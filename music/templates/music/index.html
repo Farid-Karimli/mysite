@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-color: lightpink;
+            font-family: 'Roboto Slab', serif;
+        }
+        {% if albums %}
+            section {
+                margin-top: 5vh;
+            }
+        {% else %}
+            section {
+                margin-top: 25vh;
+            }
+        {% endif %}
+
+        #main {
+            margin: 0 auto;
+            width: 30em;
+
+            text-align: center;
+        }
+        #albums {
+            margin: 5vh auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            width: 50vw;
+        }
+        .album {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 5vh;
+        }
+        label {
+            margin-right: 0.5vw;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            margin-bottom: 0;
+        }
+        a:visited, a:active {
+            color: black;
+        }
+        a:hover {
+            color: maroon;
+            animation-name: enlarge;
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+        }
+        @keyframes enlarge {
+            from {
+                font-size: 1rem;
+            }
+            to {
+                font-size: 1.1rem;
+            }
+        }
+        #date {
+            margin-top: 0;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="wrapper">
+        <div id="main">
+            <h2>Welcome to the Music App</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Search">
+            </form>
+            <p>{{ error }}</p>
+        </div>
+            <div id="albums">
+                {% for album in albums %}
+                    <div class="album">
+                        <img src="{{ album.artwork }}" width="200px" height = "200px"/>
+                        <a href="album/{{ album.sp_id }}"><p>{{album.album_name}} </p></a>
+                        <p id="date"> Release date: {{ album.release_date }}</p>
+                    </div>
+                {%  endfor %}
+            </div>
+    </section>
+</body>
+</html>
